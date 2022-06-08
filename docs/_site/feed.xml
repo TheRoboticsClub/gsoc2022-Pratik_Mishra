@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pratik Mishra's GSoC'22 with JDE Robot</title>
+    <description>The main goal of this project is to migrate several RADI-3 exercises to RADI-4, updating the models of the robots involved in those exercises to their homologous model in ROS2.
+</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 08 Jun 2022 23:24:06 +0530</pubDate>
+    <lastBuildDate>Wed, 08 Jun 2022 23:24:06 +0530</lastBuildDate>
+    <generator>Jekyll v3.8.6</generator>
+    
+      <item>
+        <title>Community Bonding Period</title>
+        <description>&lt;ul&gt; &lt;li&gt;Studied the last year GSoC blog at &lt;a href=&quot;https://theroboticsclub.github.io/gsoc2021-Siddharth_Saha/&quot;&gt;https://theroboticsclub.github.io/gsoc2021-Siddharth_Saha/&lt;/a&gt; and tried to comprehend the deliverables and methodology.&lt;/li&gt; &lt;li&gt;Cloned the foxy branch of &lt;a href=&quot;https://github.com/JdeRobot/RoboticsAcademy&quot;&gt;https://github.com/JdeRobot/RoboticsAcademy&lt;/a&gt; and ran it.&lt;/li&gt; &lt;li&gt;Pulled the...</description>
+        <pubDate>Mon, 06 Jun 2022 00:55:52 +0530</pubDate>
+        <link>http://localhost:4000/blogs/2022/06/06/Blogs.html</link>
+        <guid isPermaLink="true">http://localhost:4000/blogs/2022/06/06/Blogs.html</guid>
+        
+        
+        <category>blogs</category>
+        
+      </item>
+    
+      <item>
+        <title>Introductory Meeting</title>
+        <description>&lt;p&gt;Takeaways from the Introductory Meet&lt;/p&gt; &lt;ul&gt; &lt;li&gt;Study the Web Templates and how they work. Analyze the current R.A.D.I. 4.2.0 use of Web Templates and explore improvements.&lt;/li&gt; &lt;li&gt;Try to containerize ROS...</description>
+        <pubDate>Mon, 28 Mar 2022 14:13:59 +0530</pubDate>
+        <link>http://localhost:4000/meetings/2022/03/28/Meetings.html</link>
+        <guid isPermaLink="true">http://localhost:4000/meetings/2022/03/28/Meetings.html</guid>
+        
+        
+        <category>meetings</category>
+        
+      </item>
+    
+  </channel>
+</rss>
