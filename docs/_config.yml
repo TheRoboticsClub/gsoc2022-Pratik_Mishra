@@ -1,7 +1,7 @@
 # Setup
-title: Not Pure Poole
-description: A simple, beautiful, and powerful Jekyll theme for blogs
-url: https://vszhub.github.io
+title: Pratik's GSoC 22
+description: My blog following my coding journey through JDE Robot
+url: https://theroboticsclub.github.io/gsoc2022-Pratik_Mishra/
 avatar: /avatar.jpeg
 paginate: 5
 permalink: pretty
@@ -28,17 +28,17 @@ exclude:
   - not-pure-poole.gemspec
 
 # Optimize Jekyl SEO Tag
-twitter:
-  username: vszhub
-  card: summary
-logo: logo.png
-social:
-  name: Songzi Vong
-  links:
-    - https://twitter.com/vszhub
-    - https://github.com/vszhub
-google_site_verification: xxxxx
-lang: en
+# twitter:
+#   username: vszhub
+#   card: summary
+# logo: logo.png
+# social:
+#   name: Songzi Vong
+#   links:
+#     - https://twitter.com/vszhub
+#     - https://github.com/vszhub
+# google_site_verification: xxxxx
+# lang: en
 
 sass:
   sass_dir: _sass
@@ -54,6 +54,6 @@ sass:
 
 # Specify the author for blog posts
 author:
-  name: Songzi Vong
-  url: https://github.com/vszhub/
-  email: vszhub@gmail.com
+  name: Pratik Mishra
+  url: https://github.com/DolceParadise/
+  email: pratikmsr@outlook.com

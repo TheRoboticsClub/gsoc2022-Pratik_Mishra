@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-09T18:08:21+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Pratik’s GSoC 22</title><subtitle>My blog following my coding journey through JDE Robot</subtitle><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><entry><title type="html">Community Bonding Period</title><link href="http://localhost:4000/2022/06/05/releasing-not-pure-poole-v0-1-0/" rel="alternate" type="text/html" title="Community Bonding Period" /><published>2022-06-05T23:18:00+05:30</published><updated>2022-06-05T23:18:00+05:30</updated><id>http://localhost:4000/2022/06/05/releasing-not-pure-poole-v0-1-0</id><content type="html" xml:base="http://localhost:4000/2022/06/05/releasing-not-pure-poole-v0-1-0/">&lt;ul&gt;
+  &lt;li&gt;Studied the last year GSoC blog at &lt;a href=&quot;https://theroboticsclub.github.io/gsoc2021-Siddharth_Saha/&quot;&gt;https://theroboticsclub.github.io/gsoc2021-Siddharth_Saha/&lt;/a&gt; and tried to comprehend the deliverables and methodology.&lt;/li&gt;
+  &lt;li&gt;Cloned the foxy branch of &lt;a href=&quot;https://github.com/JdeRobot/RoboticsAcademy&quot;&gt;https://github.com/JdeRobot/RoboticsAcademy&lt;/a&gt;  and ran it.&lt;/li&gt;
+  &lt;li&gt;Pulled the Docker image of R.A.D.I. 4.2.0 and ran it.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="weekly blog" /><summary type="html">Studied the last year GSoC blog at https://theroboticsclub.github.io/gsoc2021-Siddharth_Saha/ and tried to comprehend the deliverables and methodology. Cloned the foxy branch of https://github.com/JdeRobot/RoboticsAcademy and ran it. Pulled the Docker image of R.A.D.I. 4.2.0 and ran it.</summary></entry><entry><title type="html">Introductory Meeting</title><link href="http://localhost:4000/2022/03/28/Meetings/" rel="alternate" type="text/html" title="Introductory Meeting" /><published>2022-03-28T23:18:00+05:30</published><updated>2022-03-28T23:18:00+05:30</updated><id>http://localhost:4000/2022/03/28/Meetings</id><content type="html" xml:base="http://localhost:4000/2022/03/28/Meetings/">&lt;p&gt;Takeaways from the Introductory Meet&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Study the Web Templates and how they work. Analyze the current R.A.D.I. 4.2.0 use of Web Templates and explore improvements.&lt;/li&gt;
+  &lt;li&gt;Try to containerize ROS with Docker to increase familiarity with the working of Docker.&lt;/li&gt;
+  &lt;li&gt;Kankan Boards can be a good way to track issues, commits and pull requests not only within the current repository but also to external repositories.&lt;/li&gt;
+  &lt;li&gt;Publish Blogs in order to update the mentors with the current progress in the alotted repository.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tasks&lt;/p&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Setup the blog in the given repo&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Read up on Web Templates and understand their working.&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Increase familiarity with Docker&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="meetings" /><summary type="html">Takeaways from the Introductory Meet</summary></entry></feed>
