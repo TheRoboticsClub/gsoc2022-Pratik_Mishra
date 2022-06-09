@@ -6,75 +6,66 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Pratik Mishra's GSoC'22 with JDE Robot</title>
-  <meta name="description" content="The main goal of this project is to migrate several RADI-3 exercises to RADI-4, updating the models of the robots involved in those exercises to their homologous model in ROS2.
+  <title>Centrarium</title>
+  <meta name="description" content="A simple yet classy theme for your Jekyll website or blog.
 ">
   
-  <meta name="author" content="Pratik Mishra">
-  <meta name="copyright" content="&copy; Pratik Mishra 2022">
+  <meta name="author" content="Ben Centra">
+  <meta name="copyright" content="&copy; Ben Centra 2022">
   
 
   <!-- External libraries -->
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/styles/monokai-sublime.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/styles/monokai_sublime.min.css">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css">
 
   <!-- Favicon and other icons (made with http://www.favicon-generator.org/) -->
-  <link rel="shortcut icon" href="/assets/icons/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="/assets/icons/favicon.ico" type="image/x-icon">
-  <link rel="apple-touch-icon" sizes="57x57" href="/assets/icons/apple-icon-57x57.png">
-  <link rel="apple-touch-icon" sizes="60x60" href="/assets/icons/apple-icon-60x60.png">
-  <link rel="apple-touch-icon" sizes="72x72" href="/assets/icons/apple-icon-72x72.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="/assets/icons/apple-icon-76x76.png">
-  <link rel="apple-touch-icon" sizes="114x114" href="/assets/icons/apple-icon-114x114.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="/assets/icons/apple-icon-120x120.png">
-  <link rel="apple-touch-icon" sizes="144x144" href="/assets/icons/apple-icon-144x144.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="/assets/icons/apple-icon-152x152.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/icons/apple-icon-180x180.png">
-  <link rel="icon" type="image/png" sizes="192x192"  href="/assets/icons/android-icon-192x192.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="96x96" href="/assets/icons/favicon-96x96.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/icons/favicon-16x16.png">
-  <link rel="manifest" href="/assets/icons/manifest.json">
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="msapplication-TileImage" content="/assets/icons/ms-icon-144x144.png">
-  <meta name="theme-color" content="#ffffff">
+  <link rel="shortcut icon" href="/centrarium/assets/icons/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/centrarium/assets/icons/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="57x57" href="/centrarium/assets/icons/apple-icon-57x57.png">
+	<link rel="apple-touch-icon" sizes="60x60" href="/centrarium/assets/icons/apple-icon-60x60.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/centrarium/assets/icons/apple-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="76x76" href="/centrarium/assets/icons/apple-icon-76x76.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="/centrarium/assets/icons/apple-icon-114x114.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="/centrarium/assets/icons/apple-icon-120x120.png">
+	<link rel="apple-touch-icon" sizes="144x144" href="/centrarium/assets/icons/apple-icon-144x144.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="/centrarium/assets/icons/apple-icon-152x152.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="/centrarium/assets/icons/apple-icon-180x180.png">
+	<link rel="icon" type="image/png" sizes="192x192"  href="/centrarium/assets/icons/android-icon-192x192.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/centrarium/assets/icons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="/centrarium/assets/icons/favicon-96x96.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/centrarium/assets/icons/favicon-16x16.png">
+	<link rel="manifest" href="/centrarium/assets/icons/manifest.json">
+	<meta name="msapplication-TileColor" content="#ffffff">
+	<meta name="msapplication-TileImage" content="/centrarium/assets/icons/ms-icon-144x144.png">
+	<meta name="theme-color" content="#ffffff">
 
-  
-  <!-- Facebook OGP cards -->
-  <meta property="og:description" content="The main goal of this project is to migrate several RADI-3 exercises to RADI-4, updating the models of the robots involved in those exercises to their homologous model in ROS2.
+	<!-- Facebook OGP cards -->
+  <meta property="og:description" content="A simple yet classy theme for your Jekyll website or blog.
 " />
-  <meta property="og:url" content="http://localhost:4000/index.html">
-  <meta property="og:site_name" content="Pratik Mishra's GSoC'22 with JDE Robot" />
-  <meta property="og:title" content="Pratik Mishra's GSoC'22 with JDE Robot" />
+  <meta property="og:url" content="http://bencentra.github.io" />
+  <meta property="og:site_name" content="Centrarium" />
+  <meta property="og:title" content="Centrarium" />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://localhost:4000/assets/logo.png" />
+  <meta property="og:image" content="http://bencentra.github.io/centrarium/assets/logo.png" />
   <meta property="og:image:type" content="image/png" />
   <meta property="og:image:width" content="612" />
   <meta property="og:image:height" content="605" />
-  
 
-  
   <!-- Twitter: card tags -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Pratik Mishra's GSoC'22 with JDE Robot">
-  <meta name="twitter:description" content="The main goal of this project is to migrate several RADI-3 exercises to RADI-4, updating the models of the robots involved in those exercises to their homologous model in ROS2.
+  <meta name="twitter:title" content="Centrarium">
+  <meta name="twitter:description" content="A simple yet classy theme for your Jekyll website or blog.
 ">
-  <meta name="twitter:image" content="http://localhost:4000/assets/logo.png">
-  <meta name="twitter:url" content="http://localhost:4000/index.html">
-  
+  <meta name="twitter:image" content="http://bencentra.github.io/centrarium/assets/logo.png">
+  <meta name="twitter:url" content="http://bencentra.github.io">
 
   
 
-  <!-- Site styles -->
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://localhost:4000/">
-	<link rel="alternate" type="application/rss+xml" title="Pratik Mishra's GSoC'22 with JDE Robot" href="http://localhost:4000/feed.xml" />
-	
-	<!-- Tooltips -->
-	<script type="text/javascript">
-		window.tooltips = []
-	</script>
+	<!-- Site styles -->
+  <link rel="stylesheet" href="/centrarium/css/main.css">
+  <link rel="canonical" href="http://bencentra.github.io/centrarium//">
+  <link rel="alternate" type="application/rss+xml" title="Centrarium" href="http://bencentra.github.io/centrarium//feed.xml" />
 </head>
 
 
@@ -82,40 +73,37 @@
 
     <header class="navigation" role="banner">
   <div class="navigation-wrapper">
-    <a href="/" class="logo">
-      
-      <img src="/assets/logo.png" alt="Pratik Mishra's GSoC'22 with JDE Robot">
+    <a href="/centrarium/" class="logo">
+    	
+      <img src="/centrarium/assets/logo.png" alt="Centrarium">
       
     </a>
     <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">
-      <i class="fa fa-bars"></i>
+    	<i class="fa fa-bars"></i>
     </a>
     <nav role="navigation">
       <ul id="js-navigation-menu" class="navigation-menu show">
-				
-	
-	<li class="nav-link"><a href="/about/">About</a>
-	
-
-	
-
-	
-
-	
-	<li class="nav-link"><a href="/posts/">Posts</a>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
+      	
+          
+          <li class="nav-link"><a href="/centrarium/about/">About</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <li class="nav-link"><a href="/centrarium/posts/">Posts</a>
+          
+        
+          
+          <li class="nav-link"><a href="/centrarium/typography/">Typography</a>
+          
+        
+          
+        
       </ul>
     </nav>
   </div>
@@ -125,13 +113,13 @@
     <div class="page-content">
         <div class="home">
 
-<div class="site-header-container has-cover" style="background-image: url(/assets/header_image.jpg);">
-  <div class="scrim has-cover">
-    <header class="site-header">
-      <h1 class="title">Pratik Mishra's GSoC'22 with JDE Robot</h1>
-      <p class="subtitle">Robotics Academy: migration of several exercises from ROS1 to ROS2 and refinement</p>
-    </header>
-  </div>
+<div class="site-header-container has-cover" style="background-image: url(/centrarium/assets/header_image.jpg);">
+	<div class="scrim has-cover">
+		<header class="site-header">
+		  <h1 class="title">Centrarium</h1>
+		  <p class="subtitle">A simple yet classy theme for your Jekyll website or blog</p>
+		</header>
+	</div>
 </div>
 
 <div class="wrapper">
@@ -139,25 +127,20 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/blogs/2022/06/06/Blogs.html">Community Bonding Period</a>
+      <a class="post-link" href="/centrarium/jekyll/2015/04/18/welcome-to-jekyll.html">Welcome to Jekyll!</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>
-  Studied the last year GSoC blog at https://theroboticsclub.github.io/gsoc2021-Siddharth_Saha/ and tried to comprehend the deliverables and methodology.
-  Cloned the foxy branch of https://github.com/JdeRobot/RoboticsAcademy  and ran it.
-  Pulled the Docker image of R.A.D.I. 4.2.0 and ran it.
-
-</p>
+      <p>You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">June 6, 2022</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/blogs">Blogs</a>
-        
-      
-      </div>
+    	<div class="post-date">April 18, 2015</div>
+    	<div class="post-categories">
+    	in 
+    	  
+    	  <span>Jekyll</span>
+    	  
+    	
+    	</div>
     </section>
   </li>
   
@@ -166,20 +149,86 @@
   
   <li>
     <h2>
-      <a class="post-link" href="/meetings/2022/03/28/Meetings.html">Introductory Meeting</a>
+      <a class="post-link" href="/centrarium/dummy/2015/04/18/dummy6.html">Dummy Post 6</a>
     </h2>
     <section class="post-excerpt" itemprop="description">
-      <p>Takeaways from the Introductory Meet Study the Web Templates and how they work. Analyze the current R.A.D.I. 4.2.0 use of Web Templates and explore improvements. Try to containerize ROS with Docker to increase familiarity with the working of Docker. Kankan Boards can be a good way to track issues, commits...</p>
+      <p>This is just a dummy post. Lorem ipsum and all the rest. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute...</p>
     </section>
     <section class="post-meta">
-      <div class="post-date">March 28, 2022</div>
-      <div class="post-categories">
-      in 
-        
-        <a href="/category/meetings">Meetings</a>
-        
-      
-      </div>
+    	<div class="post-date">April 18, 2015</div>
+    	<div class="post-categories">
+    	in 
+    	  
+    	  <span>Dummy</span>
+    	  
+    	
+    	</div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/centrarium/dummy/2015/04/18/dummy5.html">Dummy Post 5</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>This is just a dummy post. Lorem ipsum and all the rest. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute...</p>
+    </section>
+    <section class="post-meta">
+    	<div class="post-date">April 18, 2015</div>
+    	<div class="post-categories">
+    	in 
+    	  
+    	  <span>Dummy</span>
+    	  
+    	
+    	</div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/centrarium/dummy/2015/04/18/dummy4.html">Dummy Post 4</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>This is just a dummy post. Lorem ipsum and all the rest. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute...</p>
+    </section>
+    <section class="post-meta">
+    	<div class="post-date">April 18, 2015</div>
+    	<div class="post-categories">
+    	in 
+    	  
+    	  <span>Dummy</span>
+    	  
+    	
+    	</div>
+    </section>
+  </li>
+  
+  <hr>
+  
+  
+  <li>
+    <h2>
+      <a class="post-link" href="/centrarium/dummy/2015/04/18/dummy3.html">Dummy Post 3</a>
+    </h2>
+    <section class="post-excerpt" itemprop="description">
+      <p>This is just a dummy post. Lorem ipsum and all the rest. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute...</p>
+    </section>
+    <section class="post-meta">
+    	<div class="post-date">April 18, 2015</div>
+    	<div class="post-categories">
+    	in 
+    	  
+    	  <span>Dummy</span>
+    	  
+    	
+    	</div>
     </section>
   </li>
   
@@ -189,19 +238,24 @@
 <nav class="pagination" role="navigation">
 	<p>
     
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
-    </span>
-		
-		<span class="page-number">Page 1 of 1</span>
-		
-		<span class="fa-stack fa-lg">
-      <i class="fa fa-square fa-stack-2x"></i>
-      <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
-    </span>
-		
-	</p>
+    <a class="newer-posts" href="/centrarium/page2">
+	    <span class="fa-stack fa-lg">
+			  <i class="fa fa-square fa-stack-2x"></i>
+			  <i class="fa fa-angle-double-left fa-stack-1x fa-inverse"></i>
+			</span>
+		</a>
+    
+    <span class="page-number">Page 1 of 2</span>
+    
+    <span class="fa-stack fa-lg">
+		  <i class="fa fa-square fa-stack-2x"></i>
+		  <i class="fa fa-angle-double-right fa-stack-1x fa-inverse"></i>
+		</span>
+    
+  </p>
+  <p>
+    <a href="/centrarium/posts">View All Posts by Category</a>
+  </p>
 </nav>
 
 </div>
@@ -213,102 +267,104 @@
 
   <div class="wrapper">
 
-    <h3 class="footer-heading">Pratik Mishra's GSoC'22 with JDE Robot</h3>
+    <h3 class="footer-heading">Centrarium</h3>
 
     <div class="site-navigation">
-
-      <p><strong>Site Map</strong></p>
+    	
+    	<p><strong>Site Map</strong></p>
       <ul class="pages">
-				
-	
-	<li class="nav-link"><a href="/about/">About</a>
-	
-
-	
-
-	
-
-	
-	<li class="nav-link"><a href="/posts/">Posts</a>
-	
-
-	
-
-	
-
-	
-
-	
-
-	
-
-
+        
+        
+          <li class="nav-link"><a href="/centrarium/about/">About</a>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          <li class="nav-link"><a href="/centrarium/posts/">Posts</a>
+        
+        
+        
+          <li class="nav-link"><a href="/centrarium/typography/">Typography</a>
+        
+        
+        
+        
       </ul>
     </div>
 
     <div class="site-contact">
 
-      <p><strong>Contact</strong></p>
+    	<p><strong>Contact</strong></p>
       <ul class="social-media-list">
-        <li>
-          <a href="mailto:pratikmsr@outlook.com">
-            <i class="fa fa-envelope-o"></i>
-            <span class="username">pratikmsr@outlook.com</span>
-          </a>
-        </li>
+      	<li>
+      		<a href="mailto:blcentra@gmail.com">
+	      		<i class="fa fa-envelope-o"></i>
+	      		<span class="username">blcentra@gmail.com</span>
+      		</a>
+      	</li>
 
-        
-          
-        
-          
-          <li>
-            <a href="https://github.com/DolceParadise" title="Fork me on GitHub">
-              <i class="fa fa-github"></i>
-              <span class="username">DolceParadise</span>
-            </a>
-          </li>
-          
-        
-          
-          <li>
-            <a href="https://www.linkedin.com/in/pratik-mishra-ab78131b9/" title="Connect with me on LinkedIn">
-              <i class="fa fa-linkedin"></i>
-              <span class="username">Pratik Mishra</span>
-            </a>
-          </li>
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
+      	
+	      	
+	      	<li>
+	          <a href="https://twitter.com/TheBenCentra" title="Follow me on Twitter">
+	            <i class="fa fa-twitter"></i>
+	            <span class="username">TheBenCentra</span>
+	          </a>
+	        </li>
+	      	
+      	
+	      	
+      	
+	      	
+	      	<li>
+	          <a href="https://github.com/bencentra" title="Fork me on GitHub">
+	            <i class="fa fa-github"></i>
+	            <span class="username">bencentra</span>
+	          </a>
+	        </li>
+	      	
+      	
+	      	
+	      	<li>
+	          <a href="https://www.linkedin.com/pub/ben-centra/47/769/60a" title="Connect with me on LinkedIn">
+	            <i class="fa fa-linkedin"></i>
+	            <span class="username">Ben Centra</span>
+	          </a>
+	        </li>
+	      	
+      	
+	      	
+      	
+	      	
+      	
+	      	
+      	
+	      	
+      	
+	      	
+      	
+	      	
+      	
+	      	
+      	
+	      	
+      	
+	      	
+      	
+	      	
+      	
 
       </ul>
     </div>
 
     <div class="site-signature">
-      <p class="rss-subscribe text"><strong>Subscribe <a href="/feed.xml">via RSS</a></strong></p>
-      <p class="text">The main goal of this project is to migrate several RADI-3 exercises to RADI-4, updating the models of the robots involved in those exercises to their homologous model in ROS2.
+    	<p class="rss-subscribe text"><strong>Subscribe <a href="/centrarium/feed.xml">via RSS</a></strong></p>
+      <p class="text">A simple yet classy theme for your Jekyll website or blog.
 </p>
     </div>
 
@@ -317,18 +373,17 @@
 </footer>
 
 <!-- Scripts -->
-<script src="//code.jquery.com/jquery-3.4.1.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
-<script src="//unpkg.com/popper.js@1"></script>
-<script src="//unpkg.com/tippy.js@5"></script>
+<script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.5/highlight.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
+<script>
 
-<script type="text/javascript">
 $(document).ready(function() {
-  // Default syntax highlighting
-  hljs.initHighlightingOnLoad();
 
-  // Header
+	// Syntax highlighting
+	hljs.initHighlightingOnLoad();
+
+	// Header
   var menuToggle = $('#js-mobile-menu').unbind();
   $('#js-navigation-menu').removeClass("show");
   menuToggle.on('click', function(e) {
@@ -340,19 +395,10 @@ $(document).ready(function() {
     });
   });
 
-	// Enable tooltips via Tippy.js
-	if (Array.isArray(window.tooltips)) {
-		window.tooltips.forEach(function(tooltip) {
-			var selector = tooltip[0];
-			var config = tooltip[1];
-			tippy(selector, config);
-		})
-	}
+
 });
 
 </script>
-
-
 
 
 

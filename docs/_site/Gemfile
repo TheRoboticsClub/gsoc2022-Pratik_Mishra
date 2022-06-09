@@ -1,8 +1,4 @@
-# source 'https://rubygems.org'
-# gem 'jekyll', '<4'
-# gem 'jekyll-archives'
-# gem 'jekyll-sitemap'
-# gem 'jekyll-paginate-v2'
+# A sample Gemfile
 source "https://rubygems.org"
 
 gem "jekyll", "~>2.5"

@@ -241,13 +241,6 @@ code {
   border-radius: 3px;
   padding: 0 3px; }
 
-blockquote {
-  color: #999;
-  font-style: italic;
-  border-left: 2px solid #ddd;
-  margin-left: 0;
-  padding-left: 3em; }
-
 pre code.hljs {
   font-size: 0.8333333333em; }
 
@@ -278,9 +271,6 @@ pre code.hljs {
     margin-right: auto;
     border-radius: 50%; }
 
-.tooltip {
-  border-bottom: 1px dotted #999; }
-
 .site-header-container, .post-header-container {
   width: 100%;
   text-align: center; }
@@ -309,12 +299,6 @@ pre code.hljs {
   box-shadow: 0 2px #70aad0;
   padding: 0 1em;
   margin: 0;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  z-index: 1;
   /*
   *	Navigation Menu - http://refills.bourbon.io/unstyled/ (see "Navigation")
   */ }
@@ -397,7 +381,6 @@ pre code.hljs {
 *	Body
 */
 .page-content {
-  margin-top: 66px;
   /*
   *	index.html
   */
@@ -452,8 +435,6 @@ pre code.hljs {
     color: #999; }
     .page-content .pagination .page-number {
       padding: 0 1em; }
-    .page-content .pagination a.newer-posts {
-      text-decoration: none; }
   .page-content .site-header-container {
     color: #fff;
     text-shadow: 0 2px 1px rgba(0, 0, 0, 0.33);
@@ -524,21 +505,6 @@ pre code.hljs {
     width: 100%; }
     .page-content .post .disqus:last-child {
       margin-right: 0; }
-  .page-content .post .post-navigation {
-    font-size: 0.9em;
-    display: block;
-    width: auto; }
-    .page-content .post .post-navigation .prev-post {
-      display: block;
-      width: 50%;
-      float: left;
-      margin: 1em 0; }
-    .page-content .post .post-navigation .next-post {
-      display: block;
-      width: 50%;
-      float: left;
-      margin: 1em 0;
-      text-align: right; }
   .page-content .page .post-header {
     padding: 0.5em 1em 1em 1em;
     text-align: center; }
