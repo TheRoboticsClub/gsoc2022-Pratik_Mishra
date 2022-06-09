@@ -1,6 +1,6 @@
 ---
+layout: archive-taxonomies
+permalink: /categories/
 title: Categories
-layout: categories
-excerpt: "Category index"
-aside: true
+type: categories
 ---
