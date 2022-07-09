@@ -1,8 +1,154 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-06-26T19:15:03+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Pratik’s GSoC 22</title><subtitle>My blog following my coding journey through JDE Robot</subtitle><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><entry><title type="html">Docker</title><link href="http://localhost:4000/2022/06/25/Docker/" rel="alternate" type="text/html" title="Docker" /><published>2022-06-25T23:18:00+05:30</published><updated>2022-06-25T23:18:00+05:30</updated><id>http://localhost:4000/2022/06/25/Docker</id><content type="html" xml:base="http://localhost:4000/2022/06/25/Docker/">&lt;p&gt;My docker commands cheatsheets. 
-&lt;img src=&quot;/Docker1.jpg&quot; alt=&quot;Docker1&quot; /&gt;
-&lt;img src=&quot;/Docker2.jpg&quot; alt=&quot;Docker2&quot; /&gt;
-&lt;img src=&quot;/Docker3.jpg&quot; alt=&quot;Docker3&quot; /&gt;&lt;/p&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="musings" /><summary type="html">My docker commands cheatsheets.</summary></entry><entry><title type="html">Web Template Architecture</title><link href="http://localhost:4000/2022/06/25/WebSockets/" rel="alternate" type="text/html" title="Web Template Architecture" /><published>2022-06-25T23:18:00+05:30</published><updated>2022-06-25T23:18:00+05:30</updated><id>http://localhost:4000/2022/06/25/WebSockets</id><content type="html" xml:base="http://localhost:4000/2022/06/25/WebSockets/">&lt;p&gt;This is a brief overview of my understanding of the web template architecture.
-&lt;img src=&quot;/Web-Templates.png&quot; alt=&quot;Web-Templates&quot; /&gt;&lt;/p&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="musings" /><summary type="html">This is a brief overview of my understanding of the web template architecture.</summary></entry><entry><title type="html">Week 1 &amp;amp; 2</title><link href="http://localhost:4000/2022/06/25/Week1&2/" rel="alternate" type="text/html" title="Week 1 &amp;amp; 2" /><published>2022-06-25T23:18:00+05:30</published><updated>2022-06-25T23:18:00+05:30</updated><id>http://localhost:4000/2022/06/25/Week1&amp;2</id><content type="html" xml:base="http://localhost:4000/2022/06/25/Week1&amp;2/">&lt;p&gt;This was a dull week due to increasing coursework from CSO102: Data Structures and Algorithms and additional preparation for upcoming intership drive tests. I covered the tasks mentioned in the introductory meeting. Takeaways from these are as follows:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-10T01:42:13+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Pratik’s GSoC 22</title><subtitle>My blog following my coding journey through JDE Robot</subtitle><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><entry><title type="html">Week 3 &amp;amp; 4</title><link href="http://localhost:4000/2022/07/09/Week3-4/" rel="alternate" type="text/html" title="Week 3 &amp;amp; 4" /><published>2022-07-09T23:18:00+05:30</published><updated>2022-07-09T23:18:00+05:30</updated><id>http://localhost:4000/2022/07/09/Week3-4</id><content type="html" xml:base="http://localhost:4000/2022/07/09/Week3-4/">&lt;h2 id=&quot;to-do&quot;&gt;To-do&lt;/h2&gt;
+&lt;p&gt;These were the tasks from the previous meeting:&lt;/p&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Reflect changes from the Docker container into the SSD and vice versa&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Discover the files that are referred to in &lt;a href=&quot;https://github.com/DolceParadise/RoboticsAcademy/blob/foxy/exercises/static/exercises/amazon_warehouse/launch/amazonrobot_1_warehouse.launch&quot;&gt;amazonrobot_1_warehouse.launch&lt;/a&gt;. This was a task that came up along with the query that how does the Amazon Warehouse file launch even when there aren’t any worlds or navigation packages in &lt;a href=&quot;https://github.com/DolceParadise/RoboticsAcademy/tree/foxy/exercises/static/exercises/amazon_warehouse&quot;&gt;amazon_warehouse&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;approach&quot;&gt;Approach&lt;/h2&gt;
+
+&lt;p&gt;To perform the above tasks, it is very apparent that I have to first run the docker image. There are two ways to do this as mentioned in &lt;a href=&quot;https://github.com/DolceParadise/RoboticsAcademy/blob/foxy/scripts/README.md&quot;&gt;README.md&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Build the image locally.&lt;/li&gt;
+  &lt;li&gt;Pull the image from DockerHub.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;After the docker container runs successfully, I have to mount an external directory and then try to reflect the changes in this directory. In addition to this, I have to do a treasure hunt inside the container to find the navigation and world files for the amazon_warehouse exercise.&lt;/p&gt;
+
+&lt;h2 id=&quot;running-the-container&quot;&gt;Running the container&lt;/h2&gt;
+
+&lt;h4 id=&quot;building-the-image-locally&quot;&gt;Building the image locally&lt;/h4&gt;
+
+&lt;p&gt;This was quite a task. As per the instructions, the command to build the docker image locally is:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; foxy https://github.com/JdeRobot/RoboticsAcademy.git
+&lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;RoboticsAcademy/scripts
+&lt;span class=&quot;nb&quot;&gt;chmod&lt;/span&gt; +x build.sh
+./build.sh
+docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /tmp/.X11-unix:/tmp/.X11-unix &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; foxy_radi_container &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$PWD&lt;/span&gt;/../:/RoboticsAcademy &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8000:8000 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 2303:2303 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1905:1905 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8765:8765 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 6080:6080 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1108:1108 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      jderobot/robotics-academy:4.0.0 ./start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The first question that came to mind was why is the nametag &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jderobot/robotics-academy:4.0.0&lt;/code&gt; when clearly the image that I want to build is 4.2.0. Turns out, as long as we’re building locally, the nametag doesn’t matter. We shall only bother ourselves with the nametag when we push the image to DockerHub.&lt;/p&gt;
+
+&lt;p&gt;The first hurdle that came up when trying to build locally was that the links for downloading VirtualGL and TurboVNC weren’t working. The error output was as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Step 13/35 : RUN curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://s3.amazonaws.com/virtualgl-pr/main/linux/virtualgl_&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;VIRTUALGL_VERSION&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;_amd64.deb &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://s3.amazonaws.com/virtualgl-pr/main/linux/virtualgl32_&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;VIRTUALGL_VERSION&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;_amd64.deb &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     apt-get update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-install-recommends&lt;/span&gt; ./virtualgl_&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;VIRTUALGL_VERSION&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;_amd64.deb ./virtualgl32_&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;VIRTUALGL_VERSION&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;_amd64.deb &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;virtualgl_&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;VIRTUALGL_VERSION&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;_amd64.deb virtualgl32_&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;VIRTUALGL_VERSION&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;_amd64.deb &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;u+s /usr/lib/libvglfaker.so &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;u+s /usr/lib/libdlfaker.so &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;u+s /usr/lib32/libvglfaker.so &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;u+s /usr/lib32/libdlfaker.so &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;u+s /usr/lib/i386-linux-gnu/libvglfaker.so &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;chmod &lt;/span&gt;u+s /usr/lib/i386-linux-gnu/libdlfaker.so &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     curl &lt;span class=&quot;nt&quot;&gt;-fsSL&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-O&lt;/span&gt; https://s3.amazonaws.com/turbovnc-pr/dev/linux/turbovnc_&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TURBOVNC_VERSION&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;_amd64.deb &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     apt-get update &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt-get &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-y&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--no-install-recommends&lt;/span&gt; ./turbovnc_&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TURBOVNC_VERSION&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;_amd64.deb &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;rm &lt;/span&gt;turbovnc_&lt;span class=&quot;k&quot;&gt;${&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;TURBOVNC_VERSION&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;_amd64.deb &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; /var/lib/apt/lists/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt;     &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;no-remote-connections&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;no-httpd&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;no-x11-tcp-connections&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;no-pam-sessions&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;permitted-security-types = None, VNC, otp&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; /etc/turbovncserver-security.conf
+ &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; Running &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;69a9eb7591f7
+curl: &lt;span class=&quot;o&quot;&gt;(&lt;/span&gt;22&lt;span class=&quot;o&quot;&gt;)&lt;/span&gt; The requested URL returned error: 404 Not Found
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;I opened an &lt;a href=&quot;https://github.com/JdeRobot/RoboticsAcademy/issues/1764&quot;&gt;issue&lt;/a&gt; regarding this and made a &lt;a href=&quot;https://github.com/JdeRobot/RoboticsAcademy/pull/1765&quot;&gt;pull request&lt;/a&gt; to fix it. Soon enough, this step of building the image went through successfully.&lt;/p&gt;
+
+&lt;p&gt;Post this, I encountered another hurdle. The error output this time was&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Step 26/35 : RUN git clone &lt;span class=&quot;nt&quot;&gt;--recursive&lt;/span&gt; https://github.com/eProsima/Fast-DDS.git &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; v2.0.0 /tmp/FastRTPS-2.0.0    &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /tmp/FastRTPS-2.0.0       &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;build &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;build       &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cmake &lt;span class=&quot;nt&quot;&gt;-DTHIRDPARTY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ON &lt;span class=&quot;nt&quot;&gt;-DSECURITY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ON ..        &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cmake &lt;span class=&quot;nt&quot;&gt;--build&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--target&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-j&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nproc&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; /tmp/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+ &lt;span class=&quot;nt&quot;&gt;---&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; Running &lt;span class=&quot;k&quot;&gt;in &lt;/span&gt;49b1ac4349cd
+The &lt;span class=&quot;nb&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/bin/sh -c git clone --recursive https://github.com/eProsima/Fast-DDS.git -b v2.0.0 /tmp/FastRTPS-2.0.0     &amp;amp;&amp;amp; cd /tmp/FastRTPS-2.0.0        &amp;amp;&amp;amp; mkdir build &amp;amp;&amp;amp; cd build      &amp;amp;&amp;amp; cmake -DTHIRDPARTY=ON -DSECURITY=ON ..        &amp;amp;&amp;amp; cmake --build . --target install -- -j $(nproc)      &amp;amp;&amp;amp; rm -rf /tmp/*'&lt;/span&gt; returned a non-zero code: 2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The conclusion so far is that there is a problem in the codebase of the &lt;a href=&quot;https://github.com/eProsima/Fast-DDS&quot;&gt;Fast-DDS&lt;/a&gt; repository. Having no clue as to the solution of this, I communicated the issue to my mentors and stalled the local build attempt till this is resolved.&lt;/p&gt;
+
+&lt;h4 id=&quot;pulling-the-image-from-dockerhub&quot;&gt;Pulling the image from DockerHub&lt;/h4&gt;
+
+&lt;p&gt;The command to pull the image from DockerHub was outdated at  &lt;a href=&quot;https://github.com/DolceParadise/RoboticsAcademy/blob/foxy/scripts/README.md&quot;&gt;README.md&lt;/a&gt;. I discovered this when I had already pulled the 4.0.0 image and run it using this command&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /tmp/.X11-unix:/tmp/.X11-unix &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; foxy_radi_container &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8000:8000 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 2303:2303 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1905:1905 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8765:8765 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 6080:6080 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1108:1108 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      jderobot/robotics-academy:4.0.0 ./start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;On running this, I discovered that there was neither the Amazon warehouse exercise nor the Rviz2 web template in this image. Consequently, I changed the last line to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jderobot/robotics-academy:4.2.0 ./start.sh&lt;/code&gt; in an attempt to run the newer image. However, in this attempt, the Rviz2 template was unable to connect. When my mentor suggested me to expose proper ports, I visited &lt;a href=&quot;https://hub.docker.com/layers/jderobot/robotics-academy/4.2.0/images/sha256-5b5c561540e21a2210f95f6363133a097e6755654ae9c4dc9d07d1aa8104fdc2?context=explore&quot;&gt;DockerHub&lt;/a&gt; and scrolled down to find the ports being exposed in the image. After a small skirmish with ports 8080 and 8000, I was finally able to run the image using this command&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /tmp/.X11-unix:/tmp/.X11-unix &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; foxy_radi_container &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8000:8000 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 2303:2303 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1905:1905 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8765:8765 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 6080:6080 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1108:1108 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 6081:6081 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1831:1831 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 7681:7681 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      jderobot/robotics-academy:4.2.0 ./start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;mounting-external-directory&quot;&gt;Mounting external directory&lt;/h2&gt;
+
+&lt;p&gt;As a beginner, I decided to mount the home directory of my computer to the home directory of the container. I added &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;-v /home:/home&lt;/code&gt; in the command to do so. The final docker command looked something like this,&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /tmp/.X11-unix:/tmp/.X11-unix &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /home:home &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; foxy_radi_container &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8000:8000 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 2303:2303 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1905:1905 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8765:8765 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 6080:6080 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1108:1108 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 6081:6081 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1831:1831 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 7681:7681 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+      jderobot/robotics-academy:4.2.0 ./start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This successfully ran the image. After this, I ran a sequence of commands in the console illustrated in this image.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/TheRoboticsClub/gsoc2022-Pratik_Mishra/47a27c16439cbfdca0b4ae3e669bc797ac18ce22/docs/pictures/Week3_1.png&quot; alt=&quot;Reflected Changes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After shutting down the container, I opened a new terminal and ran the following commands.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pratik@DolceParadise:~&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; ..
+pratik@DolceParadise:/home&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ls
+&lt;/span&gt;instructions.json  pratik
+pratik@DolceParadise:/home&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This confirmed that the changes made in the container were reflected in the external mounted directory, i.e. my computer.&lt;/p&gt;
+
+&lt;h2 id=&quot;how-is-the-amazon-exercise-running&quot;&gt;How is the Amazon Exercise Running?&lt;/h2&gt;
+
+&lt;p&gt;“cd”ing into the container files, I found out that the directories &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nav2_ws&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;opt/ros/foxy&lt;/code&gt;  had the necessary packages to run the exercises. Now that I have had some experience dabbling with Docker, I feel a little more confident going into this project. Onwards and Upwards!&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Activity&lt;/th&gt;
+      &lt;th&gt;Details&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Tasks Completed&lt;/td&gt;
+      &lt;td&gt;2/2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Issues Created&lt;/td&gt;
+      &lt;td&gt;2&lt;br /&gt;&lt;a href=&quot;https://github.com/JdeRobot/RoboticsAcademy/issues/1768&quot;&gt;1768&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;https://github.com/JdeRobot/RoboticsAcademy/issues/1764&quot;&gt;1764&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Pull Requests&lt;/td&gt;
+      &lt;td&gt;2&lt;br /&gt;&lt;a href=&quot;https://github.com/JdeRobot/RoboticsAcademy/pull/1769&quot;&gt;1769&lt;/a&gt;&lt;br /&gt;&lt;a href=&quot;https://github.com/JdeRobot/RoboticsAcademy/pull/1765&quot;&gt;1765&lt;/a&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="weekly blog" /><summary type="html">To-do These were the tasks from the previous meeting:</summary></entry><entry><title type="html">Meeting 1</title><link href="http://localhost:4000/2022/06/26/Meeting2/" rel="alternate" type="text/html" title="Meeting 1" /><published>2022-06-26T23:18:00+05:30</published><updated>2022-06-26T23:18:00+05:30</updated><id>http://localhost:4000/2022/06/26/Meeting2</id><content type="html" xml:base="http://localhost:4000/2022/06/26/Meeting2/">&lt;p&gt;Takeaways from the Meeting&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Create issues in the repository and link them in Kanban board&lt;/li&gt;
+  &lt;li&gt;Consistently update the blog with all the new discoveries.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Tasks&lt;/p&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Use docker commands to mount local director to the docker container and verify if changes are being reflected.&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Find gazebo worlds and launch files of the Amazon Warehouse exercise.&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Find similar files for all of the other exercises.&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; /&gt;Compare the above findings and figure out their working.&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="meetings" /><summary type="html">Takeaways from the Meeting</summary></entry><entry><title type="html">Docker</title><link href="http://localhost:4000/2022/06/25/Docker/" rel="alternate" type="text/html" title="Docker" /><published>2022-06-25T23:18:00+05:30</published><updated>2022-06-25T23:18:00+05:30</updated><id>http://localhost:4000/2022/06/25/Docker</id><content type="html" xml:base="http://localhost:4000/2022/06/25/Docker/">&lt;p&gt;My docker commands cheatsheets. 
+&lt;img src=&quot;https://raw.githubusercontent.com/TheRoboticsClub/gsoc2022-Pratik_Mishra/main/docs/Docker1.jpg&quot; alt=&quot;Docker1&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/TheRoboticsClub/gsoc2022-Pratik_Mishra/main/docs/Docker2.jpg&quot; alt=&quot;Docker2&quot; /&gt;
+&lt;img src=&quot;https://raw.githubusercontent.com/TheRoboticsClub/gsoc2022-Pratik_Mishra/main/docs/Docker3.jpg&quot; alt=&quot;Docker3&quot; /&gt;&lt;/p&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="musings" /><summary type="html">My docker commands cheatsheets.</summary></entry><entry><title type="html">Web Template Architecture</title><link href="http://localhost:4000/2022/06/25/WebSockets/" rel="alternate" type="text/html" title="Web Template Architecture" /><published>2022-06-25T23:18:00+05:30</published><updated>2022-06-25T23:18:00+05:30</updated><id>http://localhost:4000/2022/06/25/WebSockets</id><content type="html" xml:base="http://localhost:4000/2022/06/25/WebSockets/">&lt;p&gt;This is a brief overview of my understanding of the web template architecture.
+&lt;img src=&quot;https://raw.githubusercontent.com/TheRoboticsClub/gsoc2022-Pratik_Mishra/main/docs/Web-Templates.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="musings" /><summary type="html">This is a brief overview of my understanding of the web template architecture.</summary></entry><entry><title type="html">Week 1 &amp;amp; 2</title><link href="http://localhost:4000/2022/06/25/Week1-2/" rel="alternate" type="text/html" title="Week 1 &amp;amp; 2" /><published>2022-06-25T23:18:00+05:30</published><updated>2022-06-25T23:18:00+05:30</updated><id>http://localhost:4000/2022/06/25/Week1-2</id><content type="html" xml:base="http://localhost:4000/2022/06/25/Week1-2/">&lt;p&gt;This was a dull week due to increasing coursework from CSO102: Data Structures and Algorithms and additional preparation for upcoming intership drive tests. I covered the tasks mentioned in the introductory meeting. Takeaways from these are as follows:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;I read up on the &lt;a href=&quot;https://gsyc.urjc.es//jmplaza/papers/rie2021-unibotics-draft.pdf&quot;&gt;conference research paper&lt;/a&gt; co-authored by my mentor Sakshay Mahna on web templates. This research paper detailed the working of the web template architecture and how it eliminates the need of installing Gazebo on the local system and running the code on the student’s IDE. With the help of web templates, the students is able to write code in the browser itself which communicates with the docker container using web sockets.  Additional questions noted while reading up on web templates are:
@@ -14,7 +160,7 @@
   &lt;/li&gt;
   &lt;li&gt;I read the &lt;a href=&quot;https://github.com/JdeRobot/RoboticsAcademy/blob/master/docs/clientside.md&quot;&gt;doc&lt;/a&gt; for RoboticsAcademy frontend and backend communication. I’m still a little fuzzy on the working but I believe this will be cleared up while working on it.&lt;/li&gt;
   &lt;li&gt;I got well versed with docker commands and working. I containerized a simple python web application which made the background color of a webpage red.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="weekly blog" /><summary type="html">This was a dull week due to increasing coursework from CSO102: Data Structures and Algorithms and additional preparation for upcoming intership drive tests. I covered the tasks mentioned in the introductory meeting. Takeaways from these are as follows:</summary></entry><entry><title type="html">Community Bonding Period</title><link href="http://localhost:4000/2022/06/05/releasing-not-pure-poole-v0-1-0/" rel="alternate" type="text/html" title="Community Bonding Period" /><published>2022-06-05T23:18:00+05:30</published><updated>2022-06-05T23:18:00+05:30</updated><id>http://localhost:4000/2022/06/05/releasing-not-pure-poole-v0-1-0</id><content type="html" xml:base="http://localhost:4000/2022/06/05/releasing-not-pure-poole-v0-1-0/">&lt;ul&gt;
+&lt;/ul&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="weekly blog" /><summary type="html">This was a dull week due to increasing coursework from CSO102: Data Structures and Algorithms and additional preparation for upcoming intership drive tests. I covered the tasks mentioned in the introductory meeting. Takeaways from these are as follows:</summary></entry><entry><title type="html">Community Bonding Period</title><link href="http://localhost:4000/2022/05/05/CommunityBonding/" rel="alternate" type="text/html" title="Community Bonding Period" /><published>2022-05-05T23:18:00+05:30</published><updated>2022-05-05T23:18:00+05:30</updated><id>http://localhost:4000/2022/05/05/CommunityBonding</id><content type="html" xml:base="http://localhost:4000/2022/05/05/CommunityBonding/">&lt;ul&gt;
   &lt;li&gt;Studied the last year GSoC blog at &lt;a href=&quot;https://theroboticsclub.github.io/gsoc2021-Siddharth_Saha/&quot;&gt;https://theroboticsclub.github.io/gsoc2021-Siddharth_Saha/&lt;/a&gt; and tried to comprehend the deliverables and methodology.&lt;/li&gt;
   &lt;li&gt;Cloned the foxy branch of &lt;a href=&quot;https://github.com/JdeRobot/RoboticsAcademy&quot;&gt;https://github.com/JdeRobot/RoboticsAcademy&lt;/a&gt;  and ran it.&lt;/li&gt;
   &lt;li&gt;Pulled the Docker image of R.A.D.I. 4.2.0 and ran it.&lt;/li&gt;

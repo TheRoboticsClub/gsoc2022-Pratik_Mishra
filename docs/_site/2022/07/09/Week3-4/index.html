@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+  <link rel="stylesheet" href="/assets/styles.css"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Week 3 &amp; 4 | Pratik’s GSoC 22</title>
+<meta name="generator" content="Jekyll v3.9.0" />
+<meta property="og:title" content="Week 3 &amp; 4" />
+<meta name="author" content="Pratik Mishra" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="To-do These were the tasks from the previous meeting:" />
+<meta property="og:description" content="To-do These were the tasks from the previous meeting:" />
+<link rel="canonical" href="http://localhost:4000/2022/07/09/Week3-4/" />
+<meta property="og:url" content="http://localhost:4000/2022/07/09/Week3-4/" />
+<meta property="og:site_name" content="Pratik’s GSoC 22" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-07-09T23:18:00+05:30" />
+<script type="application/ld+json">
+{"mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2022/07/09/Week3-4/"},"@type":"BlogPosting","url":"http://localhost:4000/2022/07/09/Week3-4/","headline":"Week 3 &amp; 4","dateModified":"2022-07-09T23:18:00+05:30","datePublished":"2022-07-09T23:18:00+05:30","author":{"@type":"Person","name":"Pratik Mishra"},"description":"To-do These were the tasks from the previous meeting:","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Pratik's GSoC 22" />
+</head>
+
+
+  <body>
+
+    <div class="container pure-g"><div class="sidebar-left pure-u-1 pure-u-md-1-4" style="background-color: rgb(40, 73, 77); color: rgb(255, 255, 255); background-image: url(/bg.jpeg);"><header class="masthead">
+  <div class="avatar"><img src="/avatar.jpeg" class="avatar-image" alt="Pratik Mishra">
+    </div>
+  <div class="masthead-title">
+    <a href="/" title="Home">Pratik's GSoC 22</a>
+  </div>
+  <div class="masthead-tagline">
+    <small>My blog following my coding journey through JDE Robot</small>
+  </div><nav class="navigation">
+    <ul class="navigation-list"><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/">Blog</a>
+      </li><li class="navigation-item">
+        <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/about/">About</a>
+      </li></ul>
+  </nav><div class="social pure-menu pure-menu-horizontal">
+      <ul class="social-icons pure-menu-list">
+      <li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="mailto://pratikmsr@outlook.com">
+            <i class="fas fa-envelope" title="Email"></i>
+          </a>
+        </li><li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="https://www.linkedin.com/in/pratik-mishra-ab78131b9/">
+            <i class="fab fa-linkedin" title="LinkedIn"></i>
+          </a>
+        </li><li class="pure-menu-item">
+          <a class="social-icon pure-menu-link" href="https://github.com/DolceParadise">
+            <i class="fab fa-github" title="GitHub"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+</header>
+</div>
+
+      <div class="content pure-u-1 pure-u-md-1-2"><main>
+  <article class="post">
+  <h1 class="post-title">Week 3 & 4</h1>
+  <div class="post-meta"><time datetime="2022-07-09T23:18:00+05:30" itemprop="datePublished">9 Jul 2022</time></div>
+
+  <h2 id="to-do">To-do</h2>
+<p>These were the tasks from the previous meeting:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Reflect changes from the Docker container into the SSD and vice versa</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />Discover the files that are referred to in <a href="https://github.com/DolceParadise/RoboticsAcademy/blob/foxy/exercises/static/exercises/amazon_warehouse/launch/amazonrobot_1_warehouse.launch">amazonrobot_1_warehouse.launch</a>. This was a task that came up along with the query that how does the Amazon Warehouse file launch even when there aren’t any worlds or navigation packages in <a href="https://github.com/DolceParadise/RoboticsAcademy/tree/foxy/exercises/static/exercises/amazon_warehouse">amazon_warehouse</a>.</li>
+</ul>
+
+<h2 id="approach">Approach</h2>
+
+<p>To perform the above tasks, it is very apparent that I have to first run the docker image. There are two ways to do this as mentioned in <a href="https://github.com/DolceParadise/RoboticsAcademy/blob/foxy/scripts/README.md">README.md</a>.</p>
+
+<ol>
+  <li>Build the image locally.</li>
+  <li>Pull the image from DockerHub.</li>
+</ol>
+
+<p>After the docker container runs successfully, I have to mount an external directory and then try to reflect the changes in this directory. In addition to this, I have to do a treasure hunt inside the container to find the navigation and world files for the amazon_warehouse exercise.</p>
+
+<h2 id="running-the-container">Running the container</h2>
+
+<h4 id="building-the-image-locally">Building the image locally</h4>
+
+<p>This was quite a task. As per the instructions, the command to build the docker image locally is:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone <span class="nt">-b</span> foxy https://github.com/JdeRobot/RoboticsAcademy.git
+<span class="nb">cd </span>RoboticsAcademy/scripts
+<span class="nb">chmod</span> +x build.sh
+./build.sh
+docker run <span class="nt">-it</span> <span class="se">\</span>
+      <span class="nt">--rm</span> <span class="se">\</span>
+      <span class="nt">-v</span> /tmp/.X11-unix:/tmp/.X11-unix <span class="se">\</span>
+      <span class="nt">--name</span> foxy_radi_container <span class="se">\</span>
+      <span class="nt">-v</span> <span class="nv">$PWD</span>/../:/RoboticsAcademy <span class="se">\</span>
+      <span class="nt">-p</span> 8000:8000 <span class="nt">-p</span> 2303:2303 <span class="nt">-p</span> 1905:1905 <span class="nt">-p</span> 8765:8765 <span class="nt">-p</span> 6080:6080 <span class="nt">-p</span> 1108:1108 <span class="se">\</span>
+      jderobot/robotics-academy:4.0.0 ./start.sh
+</code></pre></div></div>
+
+<p>The first question that came to mind was why is the nametag <code class="language-plaintext highlighter-rouge">jderobot/robotics-academy:4.0.0</code> when clearly the image that I want to build is 4.2.0. Turns out, as long as we’re building locally, the nametag doesn’t matter. We shall only bother ourselves with the nametag when we push the image to DockerHub.</p>
+
+<p>The first hurdle that came up when trying to build locally was that the links for downloading VirtualGL and TurboVNC weren’t working. The error output was as follows:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Step 13/35 : RUN curl <span class="nt">-fsSL</span> <span class="nt">-O</span> https://s3.amazonaws.com/virtualgl-pr/main/linux/virtualgl_<span class="k">${</span><span class="nv">VIRTUALGL_VERSION</span><span class="k">}</span>_amd64.deb <span class="o">&amp;&amp;</span>     curl <span class="nt">-fsSL</span> <span class="nt">-O</span> https://s3.amazonaws.com/virtualgl-pr/main/linux/virtualgl32_<span class="k">${</span><span class="nv">VIRTUALGL_VERSION</span><span class="k">}</span>_amd64.deb <span class="o">&amp;&amp;</span>     apt-get update <span class="o">&amp;&amp;</span> apt-get <span class="nb">install</span> <span class="nt">-y</span> <span class="nt">--no-install-recommends</span> ./virtualgl_<span class="k">${</span><span class="nv">VIRTUALGL_VERSION</span><span class="k">}</span>_amd64.deb ./virtualgl32_<span class="k">${</span><span class="nv">VIRTUALGL_VERSION</span><span class="k">}</span>_amd64.deb <span class="o">&amp;&amp;</span>     <span class="nb">rm </span>virtualgl_<span class="k">${</span><span class="nv">VIRTUALGL_VERSION</span><span class="k">}</span>_amd64.deb virtualgl32_<span class="k">${</span><span class="nv">VIRTUALGL_VERSION</span><span class="k">}</span>_amd64.deb <span class="o">&amp;&amp;</span>     <span class="nb">chmod </span>u+s /usr/lib/libvglfaker.so <span class="o">&amp;&amp;</span>     <span class="nb">chmod </span>u+s /usr/lib/libdlfaker.so <span class="o">&amp;&amp;</span>     <span class="nb">chmod </span>u+s /usr/lib32/libvglfaker.so <span class="o">&amp;&amp;</span>     <span class="nb">chmod </span>u+s /usr/lib32/libdlfaker.so <span class="o">&amp;&amp;</span>     <span class="nb">chmod </span>u+s /usr/lib/i386-linux-gnu/libvglfaker.so <span class="o">&amp;&amp;</span>     <span class="nb">chmod </span>u+s /usr/lib/i386-linux-gnu/libdlfaker.so <span class="o">&amp;&amp;</span>     curl <span class="nt">-fsSL</span> <span class="nt">-O</span> https://s3.amazonaws.com/turbovnc-pr/dev/linux/turbovnc_<span class="k">${</span><span class="nv">TURBOVNC_VERSION</span><span class="k">}</span>_amd64.deb <span class="o">&amp;&amp;</span>     apt-get update <span class="o">&amp;&amp;</span> apt-get <span class="nb">install</span> <span class="nt">-y</span> <span class="nt">--no-install-recommends</span> ./turbovnc_<span class="k">${</span><span class="nv">TURBOVNC_VERSION</span><span class="k">}</span>_amd64.deb <span class="o">&amp;&amp;</span>     <span class="nb">rm </span>turbovnc_<span class="k">${</span><span class="nv">TURBOVNC_VERSION</span><span class="k">}</span>_amd64.deb <span class="o">&amp;&amp;</span>     <span class="nb">rm</span> <span class="nt">-rf</span> /var/lib/apt/lists/<span class="k">*</span> <span class="o">&amp;&amp;</span>     <span class="nb">echo</span> <span class="nt">-e</span> <span class="s2">"no-remote-connections</span><span class="se">\n</span><span class="s2">no-httpd</span><span class="se">\n</span><span class="s2">no-x11-tcp-connections</span><span class="se">\n</span><span class="s2">no-pam-sessions</span><span class="se">\n</span><span class="s2">permitted-security-types = None, VNC, otp"</span> <span class="o">&gt;</span> /etc/turbovncserver-security.conf
+ <span class="nt">---</span><span class="o">&gt;</span> Running <span class="k">in </span>69a9eb7591f7
+curl: <span class="o">(</span>22<span class="o">)</span> The requested URL returned error: 404 Not Found
+</code></pre></div></div>
+
+<p>I opened an <a href="https://github.com/JdeRobot/RoboticsAcademy/issues/1764">issue</a> regarding this and made a <a href="https://github.com/JdeRobot/RoboticsAcademy/pull/1765">pull request</a> to fix it. Soon enough, this step of building the image went through successfully.</p>
+
+<p>Post this, I encountered another hurdle. The error output this time was</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Step 26/35 : RUN git clone <span class="nt">--recursive</span> https://github.com/eProsima/Fast-DDS.git <span class="nt">-b</span> v2.0.0 /tmp/FastRTPS-2.0.0    <span class="o">&amp;&amp;</span> <span class="nb">cd</span> /tmp/FastRTPS-2.0.0       <span class="o">&amp;&amp;</span> <span class="nb">mkdir </span>build <span class="o">&amp;&amp;</span> <span class="nb">cd </span>build       <span class="o">&amp;&amp;</span> cmake <span class="nt">-DTHIRDPARTY</span><span class="o">=</span>ON <span class="nt">-DSECURITY</span><span class="o">=</span>ON ..        <span class="o">&amp;&amp;</span> cmake <span class="nt">--build</span> <span class="nb">.</span> <span class="nt">--target</span> <span class="nb">install</span> <span class="nt">--</span> <span class="nt">-j</span> <span class="si">$(</span><span class="nb">nproc</span><span class="si">)</span>      <span class="o">&amp;&amp;</span> <span class="nb">rm</span> <span class="nt">-rf</span> /tmp/<span class="k">*</span>
+ <span class="nt">---</span><span class="o">&gt;</span> Running <span class="k">in </span>49b1ac4349cd
+The <span class="nb">command</span> <span class="s1">'/bin/sh -c git clone --recursive https://github.com/eProsima/Fast-DDS.git -b v2.0.0 /tmp/FastRTPS-2.0.0     &amp;&amp; cd /tmp/FastRTPS-2.0.0        &amp;&amp; mkdir build &amp;&amp; cd build      &amp;&amp; cmake -DTHIRDPARTY=ON -DSECURITY=ON ..        &amp;&amp; cmake --build . --target install -- -j $(nproc)      &amp;&amp; rm -rf /tmp/*'</span> returned a non-zero code: 2
+</code></pre></div></div>
+
+<p>The conclusion so far is that there is a problem in the codebase of the <a href="https://github.com/eProsima/Fast-DDS">Fast-DDS</a> repository. Having no clue as to the solution of this, I communicated the issue to my mentors and stalled the local build attempt till this is resolved.</p>
+
+<h4 id="pulling-the-image-from-dockerhub">Pulling the image from DockerHub</h4>
+
+<p>The command to pull the image from DockerHub was outdated at  <a href="https://github.com/DolceParadise/RoboticsAcademy/blob/foxy/scripts/README.md">README.md</a>. I discovered this when I had already pulled the 4.0.0 image and run it using this command</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="se">\</span>
+      <span class="nt">--rm</span> <span class="se">\</span>
+      <span class="nt">-v</span> /tmp/.X11-unix:/tmp/.X11-unix <span class="se">\</span>
+      <span class="nt">--name</span> foxy_radi_container <span class="se">\</span>
+      <span class="nt">-p</span> 8000:8000 <span class="nt">-p</span> 2303:2303 <span class="nt">-p</span> 1905:1905 <span class="nt">-p</span> 8765:8765 <span class="nt">-p</span> 6080:6080 <span class="nt">-p</span> 1108:1108 <span class="se">\</span>
+      jderobot/robotics-academy:4.0.0 ./start.sh
+</code></pre></div></div>
+
+<p>On running this, I discovered that there was neither the Amazon warehouse exercise nor the Rviz2 web template in this image. Consequently, I changed the last line to <code class="language-plaintext highlighter-rouge">jderobot/robotics-academy:4.2.0 ./start.sh</code> in an attempt to run the newer image. However, in this attempt, the Rviz2 template was unable to connect. When my mentor suggested me to expose proper ports, I visited <a href="https://hub.docker.com/layers/jderobot/robotics-academy/4.2.0/images/sha256-5b5c561540e21a2210f95f6363133a097e6755654ae9c4dc9d07d1aa8104fdc2?context=explore">DockerHub</a> and scrolled down to find the ports being exposed in the image. After a small skirmish with ports 8080 and 8000, I was finally able to run the image using this command</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="se">\</span>
+      <span class="nt">--rm</span> <span class="se">\</span>
+      <span class="nt">-v</span> /tmp/.X11-unix:/tmp/.X11-unix <span class="se">\</span>
+      <span class="nt">--name</span> foxy_radi_container <span class="se">\</span>
+      <span class="nt">-p</span> 8000:8000 <span class="nt">-p</span> 2303:2303 <span class="nt">-p</span> 1905:1905 <span class="nt">-p</span> 8765:8765 <span class="nt">-p</span> 6080:6080 <span class="nt">-p</span> 1108:1108 <span class="nt">-p</span> 6081:6081 <span class="nt">-p</span> 1831:1831 <span class="nt">-p</span> 7681:7681 <span class="se">\</span>
+      jderobot/robotics-academy:4.2.0 ./start.sh
+</code></pre></div></div>
+
+<h2 id="mounting-external-directory">Mounting external directory</h2>
+
+<p>As a beginner, I decided to mount the home directory of my computer to the home directory of the container. I added <code class="language-plaintext highlighter-rouge">-v /home:/home</code> in the command to do so. The final docker command looked something like this,</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker run <span class="nt">-it</span> <span class="se">\</span>
+      <span class="nt">--rm</span> <span class="se">\</span>
+      <span class="nt">-v</span> /tmp/.X11-unix:/tmp/.X11-unix <span class="se">\</span>
+      <span class="nt">-v</span> /home:home <span class="se">\</span>
+      <span class="nt">--name</span> foxy_radi_container <span class="se">\</span>
+      <span class="nt">-p</span> 8000:8000 <span class="nt">-p</span> 2303:2303 <span class="nt">-p</span> 1905:1905 <span class="nt">-p</span> 8765:8765 <span class="nt">-p</span> 6080:6080 <span class="nt">-p</span> 1108:1108 <span class="nt">-p</span> 6081:6081 <span class="nt">-p</span> 1831:1831 <span class="nt">-p</span> 7681:7681 <span class="se">\</span>
+      jderobot/robotics-academy:4.2.0 ./start.sh
+</code></pre></div></div>
+
+<p>This successfully ran the image. After this, I ran a sequence of commands in the console illustrated in this image.</p>
+
+<p><img src="https://raw.githubusercontent.com/TheRoboticsClub/gsoc2022-Pratik_Mishra/47a27c16439cbfdca0b4ae3e669bc797ac18ce22/docs/pictures/Week3_1.png" alt="Reflected Changes" /></p>
+
+<p>After shutting down the container, I opened a new terminal and ran the following commands.</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pratik@DolceParadise:~<span class="nv">$ </span><span class="nb">cd</span> ..
+pratik@DolceParadise:/home<span class="nv">$ </span><span class="nb">ls
+</span>instructions.json  pratik
+pratik@DolceParadise:/home<span class="nv">$ </span>
+</code></pre></div></div>
+
+<p>This confirmed that the changes made in the container were reflected in the external mounted directory, i.e. my computer.</p>
+
+<h2 id="how-is-the-amazon-exercise-running">How is the Amazon Exercise Running?</h2>
+
+<p>“cd”ing into the container files, I found out that the directories <code class="language-plaintext highlighter-rouge">nav2_ws</code> and <code class="language-plaintext highlighter-rouge">opt/ros/foxy</code>  had the necessary packages to run the exercises. Now that I have had some experience dabbling with Docker, I feel a little more confident going into this project. Onwards and Upwards!</p>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Activity</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Tasks Completed</td>
+      <td>2/2</td>
+    </tr>
+    <tr>
+      <td>Issues Created</td>
+      <td>2<br /><a href="https://github.com/JdeRobot/RoboticsAcademy/issues/1768">1768</a><br /><a href="https://github.com/JdeRobot/RoboticsAcademy/issues/1764">1764</a></td>
+    </tr>
+    <tr>
+      <td>Pull Requests</td>
+      <td>2<br /><a href="https://github.com/JdeRobot/RoboticsAcademy/pull/1769">1769</a><br /><a href="https://github.com/JdeRobot/RoboticsAcademy/pull/1765">1765</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+  
+    
+      <div class="post-tags-section">
+  <i class="post-tags-icon fas fa-tags"></i>
+  <ul class="post-tags"><li>
+        <a class="post-tag" href="/tags/#weekly-blog">weekly-blog</a></li></ul>
+</div>
+
+  
+
+  
+</article>
+
+
+<aside class="related">
+  <h2>Related posts</h2>
+  <ul class="related-posts">
+    
+      <li>
+        <a href="/2022/06/26/Meeting2/">
+          Meeting 1
+          <small><time datetime="2022-06-26T23:18:00+05:30">26 Jun 2022</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2022/06/25/Week1-2/">
+          Week 1 & 2
+          <small><time datetime="2022-06-25T23:18:00+05:30">25 Jun 2022</time></small>
+        </a>
+      </li>
+    
+      <li>
+        <a href="/2022/06/25/WebSockets/">
+          Web Template Architecture
+          <small><time datetime="2022-06-25T23:18:00+05:30">25 Jun 2022</time></small>
+        </a>
+      </li>
+    
+  </ul>
+</aside>
+
+
+</main>
+
+<footer class="footer"><small>
+    &copy; 2022 <a href="https://github.com/DolceParadise/">Pratik Mishra</a>. All rights reserved.
+    Powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://github.com/vszhub/not-pure-poole">Not Pure Poole</a>.
+  </small>
+</footer>
+</div>
+      <div class="sidebar-right pure-u-1 pure-u-md-1-4">
+</div>
+    </div>
+
+    <script async src="https://use.fontawesome.com/releases/v5.0.12/js/all.js"></script><script>
+  function strip(str, remove) {
+    while (str.length > 0 && remove.indexOf(str.charAt(0)) != -1) {
+      str = str.substr(1);
+    }
+    while (str.length > 0 && remove.indexOf(str.charAt(str.length - 1)) != -1) {
+      str = str.substr(0, str.length - 1);
+    }
+    return str;
+  }
+
+  function scroll() {
+    console.log('scroll');
+    window.scrollTo({
+      left: 0, 
+      top: window.innerHeight,
+      behavior: 'smooth'
+    });
+    sessionStorage.removeItem('forceCheckScroll');
+  }
+
+  const forceCheckScroll = sessionStorage.getItem('forceCheckScroll') === 'true';
+  const checkScroll = strip(window.location.pathname, '/') !== strip('', '/');
+
+  if (forceCheckScroll || checkScroll) {
+    const maxWidth = "(max-width: 48rem)";
+    const result = window.matchMedia(maxWidth);
+    if (result.matches) {
+      scroll();
+    } else {
+      result.addListener((match) => {
+        if (match.media == maxWidth) {
+          if (match.matches) {
+            scroll();
+          }
+        }
+      });
+    }
+  }
+</script>
+</body>
+</html>

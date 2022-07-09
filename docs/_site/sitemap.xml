@@ -5,8 +5,8 @@
 <lastmod>2022-03-28T23:18:00+05:30</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2022/06/05/releasing-not-pure-poole-v0-1-0/</loc>
-<lastmod>2022-06-05T23:18:00+05:30</lastmod>
+<loc>http://localhost:4000/2022/05/05/CommunityBonding/</loc>
+<lastmod>2022-05-05T23:18:00+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/2022/06/25/Docker/</loc>
@@ -17,8 +17,16 @@
 <lastmod>2022-06-25T23:18:00+05:30</lastmod>
 </url>
 <url>
-<loc>http://localhost:4000/2022/06/25/Week1&amp;2/</loc>
+<loc>http://localhost:4000/2022/06/25/Week1-2/</loc>
 <lastmod>2022-06-25T23:18:00+05:30</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2022/06/26/Meeting2/</loc>
+<lastmod>2022-06-26T23:18:00+05:30</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2022/07/09/Week3-4/</loc>
+<lastmod>2022-07-09T23:18:00+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
@@ -34,5 +42,8 @@
 </url>
 <url>
 <loc>http://localhost:4000/tags/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/page2/</loc>
 </url>
 </urlset>
