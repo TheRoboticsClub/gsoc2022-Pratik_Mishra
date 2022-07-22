@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-<loc>http://localhost:4000/2022/03/28/Meetings/</loc>
+<loc>http://localhost:4000/2022/03/28/Meeting1/</loc>
 <lastmod>2022-03-28T23:18:00+05:30</lastmod>
 </url>
 <url>
@@ -27,6 +27,10 @@
 <url>
 <loc>http://localhost:4000/2022/07/09/Week3/</loc>
 <lastmod>2022-07-09T23:18:00+05:30</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/2022/07/11/Meeting3/</loc>
+<lastmod>2022-07-11T23:18:00+05:30</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/about/</loc>
