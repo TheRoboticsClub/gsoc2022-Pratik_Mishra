@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-23T00:07:29+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Pratik’s GSoC 22</title><subtitle>My blog following my coding journey through JDE Robot</subtitle><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><entry><title type="html">Meeting 2</title><link href="http://localhost:4000/2022/07/11/Meeting3/" rel="alternate" type="text/html" title="Meeting 2" /><published>2022-07-11T23:18:00+05:30</published><updated>2022-07-11T23:18:00+05:30</updated><id>http://localhost:4000/2022/07/11/Meeting3</id><content type="html" xml:base="http://localhost:4000/2022/07/11/Meeting3/">&lt;p&gt;Suggestions:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-07-23T09:06:39+05:30</updated><id>http://localhost:4000/feed.xml</id><title type="html">Pratik’s GSoC 22</title><subtitle>My blog following my coding journey through JDE Robot</subtitle><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><entry><title type="html">Week 4</title><link href="http://localhost:4000/2022/07/20/Week4/" rel="alternate" type="text/html" title="Week 4" /><published>2022-07-20T23:18:00+05:30</published><updated>2022-07-20T23:18:00+05:30</updated><id>http://localhost:4000/2022/07/20/Week4</id><content type="html" xml:base="http://localhost:4000/2022/07/20/Week4/">&lt;h2 id=&quot;to-do&quot;&gt;To-do&lt;/h2&gt;
+
+&lt;p&gt;These were the tasks received from the previous meeting&lt;/p&gt;
+
+&lt;ul class=&quot;task-list&quot;&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Attempt to fix the FastDDS issue&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Mount RoboticsAcademy to the Docker Image and try to figure out the changes that can be reflected&lt;/li&gt;
+  &lt;li class=&quot;task-list-item&quot;&gt;&lt;input type=&quot;checkbox&quot; class=&quot;task-list-item-checkbox&quot; disabled=&quot;disabled&quot; checked=&quot;checked&quot; /&gt;Explore the breaking changes when migrating from ROS1 to ROS2&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;approach&quot;&gt;Approach&lt;/h2&gt;
+
+&lt;h4 id=&quot;task-1&quot;&gt;Task 1&lt;/h4&gt;
+
+&lt;p&gt;The details of the fix required in this task is described in this &lt;a href=&quot;https://github.com/TheRoboticsClub/gsoc2022-Pratik_Mishra/issues/2&quot;&gt;issue&lt;/a&gt; and in my &lt;a href=&quot;https://theroboticsclub.github.io/gsoc2022-Pratik_Mishra/2022/07/09/Week3/&quot;&gt;Week 3 Blog&lt;/a&gt;. Clearly there is a problem while cloning the FAST-DDS repository. Using my mentor’s valuable advice, I looked up the issue on the repository and found another similar &lt;a href=&quot;https://github.com/eProsima/Fast-DDS/issues/2713&quot;&gt;issue&lt;/a&gt;. This &lt;a href=&quot;https://github.com/eProsima/Fast-DDS/issues/2713#issuecomment-1143585758&quot;&gt;comment&lt;/a&gt; suggested that the pointer to arithmetic conversion error has been solved in the release version 2.0.2. Therefore, I decided to give running the version 2.0.2 of FastDDS a shot.&lt;/p&gt;
+
+&lt;p&gt;I made the following changes in the Dockerfile-foxy.base:&lt;/p&gt;
+&lt;div class=&quot;language-dockerfile highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# Fast-DDS (Fast-RTPS 2.0.2)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;RUN &lt;/span&gt;git clone &lt;span class=&quot;nt&quot;&gt;--recursive&lt;/span&gt; https://github.com/eProsima/Fast-DDS.git &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; v2.0.2 /tmp/FastRTPS-2.0.2 &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd&lt;/span&gt; /tmp/FastRTPS-2.0.2 &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;mkdir &lt;/span&gt;build &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;build &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cmake &lt;span class=&quot;nt&quot;&gt;-DTHIRDPARTY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ON &lt;span class=&quot;nt&quot;&gt;-DSECURITY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;ON .. &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; cmake &lt;span class=&quot;nt&quot;&gt;--build&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--target&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-j&lt;/span&gt; &lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;nproc&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\
+&lt;/span&gt;	&lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; /tmp/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This step completed successfully after retrying build.&lt;/p&gt;
+
+&lt;h4 id=&quot;task-2&quot;&gt;Task 2&lt;/h4&gt;
+
+&lt;p&gt;I used the following command to mount the GitHub cloned RoboticsAcademy folder to the one with the same name present in the Docker container.&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;docker run &lt;span class=&quot;nt&quot;&gt;-it&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;--rm&lt;/span&gt; &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /tmp/.X11-unix:/tmp/.X11-unix &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; /home/pratik/RoboticsAcademy:/RoboticsAcademy &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;--name&lt;/span&gt; foxy_radi_container &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8000:8000 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 2303:2303 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1905:1905 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 8765:8765 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 6080:6080 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1108:1108 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 6081:6081 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 1831:1831 &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; 7681:7681 &lt;span class=&quot;se&quot;&gt;\&lt;/span&gt;
+       jderobot/robotics-academy:4.2.0 ./start.sh
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Initially, the Amazon Exercise produced by the RoboticsAcademy Page is shown as follows:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/TheRoboticsClub/gsoc2022-Pratik_Mishra/blob/main/docs/pictures/Week4_2.png?raw=true&quot; alt=&quot;Changed&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;However, since I had mounted my own system’s RoboticsAcademy folder, I changed a tiny bit of code to see if the changes are shown in the web browser. I navigated to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exercises/templates/exercises/amazon_single/exercise.html&lt;/code&gt; and changed the lines 7 through 11 to this piece of code.&lt;/p&gt;
+
+&lt;div class=&quot;language-html highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;iframeGzweb&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;display:none;&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;split b&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;console&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;display:none;&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50%&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;id=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;iframeRvizweb&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;style=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;display:none;&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;100%&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;50%&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, I tried to replace the Gazebo Web Client’s position with that of Rviz2. This produced the following effect:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://github.com/TheRoboticsClub/gsoc2022-Pratik_Mishra/blob/main/docs/pictures/Week4_1.png?raw=true&quot; alt=&quot;Original&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This clearly shows and proves that the changes made in the local directory are reflected in the docker container once they are saved and the local directory is mounted to the analogous directory of the Docker container.&lt;/p&gt;
+
+&lt;h4 id=&quot;task-3&quot;&gt;Task 3&lt;/h4&gt;
+
+&lt;p&gt;Refer #musings&lt;/p&gt;</content><author><name>Pratik Mishra</name><email>pratikmsr@outlook.com</email></author><category term="weekly blog" /><summary type="html">To-do</summary></entry><entry><title type="html">Meeting 2</title><link href="http://localhost:4000/2022/07/11/Meeting3/" rel="alternate" type="text/html" title="Meeting 2" /><published>2022-07-11T23:18:00+05:30</published><updated>2022-07-11T23:18:00+05:30</updated><id>http://localhost:4000/2022/07/11/Meeting3</id><content type="html" xml:base="http://localhost:4000/2022/07/11/Meeting3/">&lt;p&gt;Suggestions:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Doing Django tutorials is not required. One or two video to introduce to Django should be enough. Changes can be easily done by changing all the occurences of variables.&lt;/li&gt;
